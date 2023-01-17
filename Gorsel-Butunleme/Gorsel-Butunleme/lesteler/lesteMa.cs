@@ -32,8 +32,9 @@ namespace Gorsel_Butunleme.lesteler
         {
             try
             {
-
+                tb = new DataTable();
                 ekle = new MySqlDataAdapter("SELECT * FROM manavlar", conn);
+                ekle.Fill(tb);
                 dataGridView1.DataSource = tb;
 
             }

@@ -78,10 +78,11 @@ namespace Gorsel_Butunleme.muşteriler22
         {
             try
             {
-                dataGridView1.Show();
+                tb = new DataTable();
                 ekle = new MySqlDataAdapter("SELECT * FROM musterıler", conn);
                 ekle.Fill(tb);
                 dataGridView1.DataSource = tb;
+
             }
             catch (Exception ex)
             {

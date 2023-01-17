@@ -26,8 +26,9 @@ namespace Gorsel_Butunleme.Deliveriler
         {
             try
             {
-
-                ekle = new MySqlDataAdapter("SELECT * FROM manavlar", conn);
+                tb = new DataTable();
+                ekle = new MySqlDataAdapter("SELECT * FROM dilivge", conn);
+                ekle.Fill(tb);
                 dataGridView1.DataSource = tb;
 
             }

@@ -26,10 +26,11 @@ namespace Gorsel_Butunleme.muşterler
         {
             try
             {
-                
+               
                 ekle = new MySqlDataAdapter("SELECT * FROM manavlar", conn);
                 dataGridView1.DataSource = tb;
-              
+               
+
             }
             catch (Exception ex)
             {
@@ -83,9 +84,11 @@ namespace Gorsel_Butunleme.muşterler
         {
             try
             {
+                tb = new DataTable();
                 ekle = new MySqlDataAdapter("SELECT * FROM manavlar", conn);
                 ekle.Fill(tb);
                 dataGridView1.DataSource = tb;
+
             }
             catch (Exception ex)
             {

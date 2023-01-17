@@ -24,10 +24,11 @@ namespace Gorsel_Butunleme.Userler
         {
             try
             {
-
-                ekle = new MySqlDataAdapter("SELECT * FROM manavlar", conn);
+                tb = new DataTable();
+                ekle = new MySqlDataAdapter("SELECT * FROM users", conn);
+                ekle.Fill(tb);
                 dataGridView1.DataSource = tb;
-
+              
             }
             catch (Exception ex)
             {
