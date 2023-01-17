@@ -60,7 +60,7 @@ namespace Gorsel_Butunleme.lesteler
         {
             conn.Open();
             DataTable dt = new DataTable();
-            string serhs = "SELECT * FROM dilivge WHERE MaName LIKE '%" + ARAMOTOR.Text + "%'";
+            string serhs = "SELECT * FROM dilivge WHERE dilivname LIKE '%" + ARAMOTOR.Text + "%'";
             MySqlCommand cmd = new MySqlCommand(serhs, conn);
             MySqlDataAdapter da = new MySqlDataAdapter(cmd);
             da.Fill(dt);

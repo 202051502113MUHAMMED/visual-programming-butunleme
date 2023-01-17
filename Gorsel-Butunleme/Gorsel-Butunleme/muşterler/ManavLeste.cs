@@ -26,16 +26,17 @@ namespace Gorsel_Butunleme.muşterler
         {
             try
             {
-               
+                tb = new DataTable();
                 ekle = new MySqlDataAdapter("SELECT * FROM manavlar", conn);
+                ekle.Fill(tb);
                 dataGridView1.DataSource = tb;
-               
 
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "message");
             }
+        
         }
 
         public ManavLeste()
