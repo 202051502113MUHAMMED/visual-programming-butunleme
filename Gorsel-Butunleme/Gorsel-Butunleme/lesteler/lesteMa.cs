@@ -99,5 +99,10 @@ namespace Gorsel_Butunleme.lesteler
         {
 
         }
+
+        private void dataGridView1_SelectionChanged(object sender, EventArgs e)
+        {
+            TXTIMG.ImageLocation = dataGridView1.CurrentRow.Cells[5].Value.ToString();
+        }
     }
 }

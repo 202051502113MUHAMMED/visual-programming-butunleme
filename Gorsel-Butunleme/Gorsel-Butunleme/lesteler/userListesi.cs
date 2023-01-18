@@ -71,5 +71,15 @@ namespace Gorsel_Butunleme.lesteler
         {
             gunceleData();
         }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+           
+        }
+
+        private void dataGridView1_SelectionChanged(object sender, EventArgs e)
+        {
+            TXTIMG.ImageLocation = dataGridView1.CurrentRow.Cells[4].Value.ToString();
+        }
     }
 }
